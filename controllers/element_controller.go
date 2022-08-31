@@ -1,5 +1,7 @@
 package controllers
 
-func getElement() {
+import "net/http"
+
+func GetElement(resp http.ResponseWriter, req *http.Request) {
 
 }
