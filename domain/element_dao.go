@@ -2,6 +2,9 @@ package domain
 
 import (
 	"fmt"
+	"net/http"
+
+	"github.com/GaryLouisStewart/ms-mvc/utils"
 )
 
 var (
@@ -10,9 +13,13 @@ var (
 	}
 )
 
-func GetElement(elementId int64) (*Element, error) {
+func GetElement(elementId int64) (*Element, *utils.MsMvcError) {
 	if element := elements[elementId]; element != nil {
 		return element, nil
 	}
-	return nil, fmt.Errorf(fmt.Sprintf("element %v was not found", elementId))
+	return nil, &utils.MsMvcError{
+		Message:    fmt.Sprintf("element %v was not found", elementId),
+		StatusCode: http.StatusNotFound,
+		Code:       "not found",
+	}
 }
