@@ -26,9 +26,10 @@ func GetElement(resp http.ResponseWriter, req *http.Request) {
 	element, apiErr := services.GetElement(elementId)
 	if apiErr != nil {
 		// handle the error and return to the client
+		jsonValue, _ := json.Marshal(apiErr)
 		resp.WriteHeader(apiErr.StatusCode)
 
-		resp.Write([]byte(apiErr.Message))
+		resp.Write([]byte(jsonValue))
 		return
 	}
 
