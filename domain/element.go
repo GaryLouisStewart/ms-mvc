@@ -1,10 +1,10 @@
 package domain
 
 type Element struct {
-	Id            uint64
-	Name          string
-	AtomicMass    float64
-	MeltingPoint  float64
-	BoilingPoint  float64
-	DiscoveryDate uint64
+	Id            uint64  `json:"id"`
+	Name          string  `json:"name"`
+	AtomicMass    float64 `json:"atomic_mass"`
+	MeltingPoint  float64 `json:"melting_point"`
+	BoilingPoint  float64 `json:"boiling_point"`
+	DiscoveryDate uint64  `json:"discovery_date"`
 }
