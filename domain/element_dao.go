@@ -18,8 +18,8 @@ func GetElement(elementId int64) (*Element, *utils.MsMvcError) {
 		return element, nil
 	}
 	return nil, &utils.MsMvcError{
-		Message:    fmt.Sprintf("element %v was not found", elementId),
+		Message:    fmt.Sprintf("element %v does not exist", elementId),
 		StatusCode: http.StatusNotFound,
-		Code:       "not found",
+		Code:       "not_found",
 	}
 }
