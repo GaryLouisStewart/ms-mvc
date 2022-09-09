@@ -16,3 +16,6 @@
 
 # the ms-mvc app when built, should not be in the git repo.
 ms-mvc
+
+# the launch.json file
+launch.json

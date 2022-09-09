@@ -4,6 +4,11 @@ build:
 run:
 	go run main.go
 
+tests:
+	@read -p "Enter the directory you wish to run tests from:" directory; \
+	test_dir=$$directory; \
+	go test -cover ./$$test_dir -v
+
 compile:
 	echo "Compiling ms-mvc app for each OS/Platform/architecture"
 	GOOS="darwin" GOARCH="arm64" go build -o bin/ms-mvc-osx-arm64 main.go
