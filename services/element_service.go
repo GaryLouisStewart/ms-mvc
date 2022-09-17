@@ -5,6 +5,12 @@ import (
 	"github.com/GaryLouisStewart/ms-mvc/utils"
 )
 
-func GetElement(elementId int64) (*domain.Element, *utils.MsMvcError) {
-	return domain.GetElement(elementId)
+type elementService struct{}
+
+var (
+	ElementService elementService
+)
+
+func (u *elementService) GetElement(elementId int64) (*domain.Element, *utils.MsMvcError) {
+	return domain.ElementDao.GetElement(elementId)
 }
