@@ -5,8 +5,8 @@ a rework of the MVC architecture, this is my attempt to finish this course to be
 
 ### ToDo: 
 - add POST function to create an element
-- add UPDATE function to change an element
-- add DELETE function to change an element
+- add UPDATE function to update an element
+- add DELETE function to delete an element
 - add in database functionality to this app, currently it uses a variable to pull information from
 - write a dockerfile to handle building the container images for this app
 - add in k8s files to handle deployments
