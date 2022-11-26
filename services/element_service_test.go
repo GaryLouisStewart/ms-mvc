@@ -1,11 +1,12 @@
 package services
 
 import (
+	"net/http"
+	"testing"
+
 	"github.com/GaryLouisStewart/ms-mvc/domain"
 	"github.com/GaryLouisStewart/ms-mvc/utils"
 	"github.com/stretchr/testify/assert"
-	"net/http"
-	"testing"
 )
 
 var (

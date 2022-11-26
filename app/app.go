@@ -19,7 +19,3 @@ func StartApp() {
 		panic(err)
 	}
 }
-
-func getRouter() {
-
-}
